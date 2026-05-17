@@ -54,6 +54,25 @@ export default function ProductsList({ onBuy }) {
             </div>
           ))}
         </div>
+
+        {/* ⭐ SECCIÓN INTRODUCTORIA TARJETA PERSONALIZADA */}
+        <div className="mt-20 text-center bg-white/5 border border-white/10 rounded-xl p-10">
+          <h3 className="text-3xl font-bold mb-4">
+            Tarjeta Personalizada Premium
+          </h3>
+
+          <p className="text-white/60 max-w-xl mx-auto mb-6">
+            Diseñada especialmente para tu marca, negocio o profesión.
+          </p>
+
+          <a
+            href="/personalizada"
+            className="inline-block px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-neutral-200 transition"
+          >
+            Ver más
+          </a>
+        </div>
+
       </div>
     </section>
   );
