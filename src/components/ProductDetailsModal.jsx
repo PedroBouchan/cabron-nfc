@@ -1,6 +1,6 @@
 import { useLanguage } from "../context/LanguageContext";
 
-export default function ProductDetailsModal({ open, onClose, product }) {
+export default function ProductDetailsModal({ open, onClose, product, onBuy }) {
   const { texts } = useLanguage();
 
   if (!open || !product) return null;
@@ -58,7 +58,7 @@ export default function ProductDetailsModal({ open, onClose, product }) {
           ))}
         </ul>
 
-        <p className="text-xl font-semibold text-white">{product.price}</p>
+        <p className="text-xl font-semibold text-white">${product.price}</p>
 
         <div className="flex gap-4 pt-4">
           <button
@@ -69,6 +69,7 @@ export default function ProductDetailsModal({ open, onClose, product }) {
           </button>
 
           <button
+            onClick={() => onBuy(product)}
             className="w-full py-3 rounded-full bg-white text-black font-semibold hover:bg-nfcblue hover:text-white transition"
           >
             {texts.modal_buy}

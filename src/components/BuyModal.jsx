@@ -1,35 +1,32 @@
-export default function BuyModal({ open, onClose }) {
-  if (!open) return null;
+export default function BuyModal({ open, onClose, product }) {
+  if (!open || !product) return null;
 
   const handleCheckout = async () => {
     try {
-      console.log("🚀 Enviando solicitud a Vercel...");
-
       const response = await fetch(
         "https://cabron-nfc.vercel.app/api/checkout",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: product.name,
+            price: product.price,
+          }),
         }
       );
 
       const data = await response.json();
 
-      console.log("🔥 RESPUESTA BACKEND:", data);
-
-      // ❌ SI HAY ERROR DEL BACKEND
       if (!response.ok) {
         alert(data.error || "Error en el servidor");
         return;
       }
 
-      // ❌ SI NO VIENE URL
       if (!data.url) {
         alert("No se recibió URL de Stripe");
         return;
       }
 
-      // ✅ REDIRECCIÓN SEGURA
       window.location.href = data.url;
 
     } catch (error) {
@@ -47,33 +44,9 @@ export default function BuyModal({ open, onClose }) {
         {/* PRODUCTO */}
         <div className="space-y-2">
           <label className="text-white/70 text-sm">Producto</label>
-          <select className="w-full bg-black border border-white/20 rounded-lg p-3">
-            <option>Tarjeta NFC Clásica</option>
-            <option>Tarjeta Premium Negra</option>
-            <option>Sticker NFC</option>
-            <option>Llavero NFC</option>
-          </select>
-        </div>
-
-        {/* COLOR */}
-        <div className="space-y-2">
-          <label className="text-white/70 text-sm">Color</label>
-          <select className="w-full bg-black border border-white/20 rounded-lg p-3">
-            <option>Negro</option>
-            <option>Blanco</option>
-            <option>Azul</option>
-          </select>
-        </div>
-
-        {/* CANTIDAD */}
-        <div className="space-y-2">
-          <label className="text-white/70 text-sm">Cantidad</label>
-          <input
-            type="number"
-            min="1"
-            defaultValue="1"
-            className="w-full bg-black border border-white/20 rounded-lg p-3"
-          />
+          <div className="w-full bg-black border border-white/20 rounded-lg p-3">
+            {product.name} — ${product.price}
+          </div>
         </div>
 
         {/* BOTONES */}

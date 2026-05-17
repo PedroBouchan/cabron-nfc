@@ -17,42 +17,38 @@ export default function App() {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // ⭐ FUNCIÓN FINAL PARA PROCEDER AL PAGO (STRIPE EN VERCEL)
-  const handleCheckout = async () => {
-    console.log("✅ handleCheckout llamado");
-
-    try {
-      const response = await fetch("/.netlify/functions/checkout", {
-  method: "POST",
-});
-
-
-      console.log("✅ respuesta de /api/checkout:", response.status);
-
-      const data = await response.json();
-      console.log("✅ data de Stripe:", data);
-
-      if (data.url) {
-        console.log("✅ redirigiendo a:", data.url);
-        window.location.href = data.url;
-      } else {
-        console.error("❌ No se recibió URL de Stripe:", data);
-      }
-    } catch (error) {
-      console.error("❌ Error en checkout:", error);
-    }
+  // ⭐ ABRIR MODAL DE COMPRA CON PRODUCTO
+  const openBuyModal = (product) => {
+    setSelectedProduct(product);
+    setBuyOpen(true);
   };
 
   return (
     <div className="bg-black min-h-screen text-white pt-24">
 
-      <Navbar onBuy={() => setBuyOpen(true)} />
-      <Hero onBuy={() => setBuyOpen(true)} />
+      {/* NAVBAR */}
+      <Navbar onBuy={() => openBuyModal({
+        name: "Tarjeta NFC CABRÓN",
+        price: 39.99,
+        image: "/tarjeta.png"
+      })} />
+
+      {/* HERO */}
+      <Hero onBuy={() => openBuyModal({
+        name: "Tarjeta NFC CABRÓN",
+        price: 39.99,
+        image: "/tarjeta.png"
+      })} />
+
       <Benefits />
 
-      {/* Producto principal */}
+      {/* PRODUCTO PRINCIPAL */}
       <Product
-        onBuy={() => setBuyOpen(true)}
+        onBuy={() => openBuyModal({
+          name: "Tarjeta NFC CABRÓN",
+          price: 39.99,
+          image: "/tarjeta.png"
+        })}
         onDetails={() => {
           setSelectedProduct({
             name: "Tarjeta NFC CABRÓN",
@@ -63,8 +59,9 @@ export default function App() {
         }}
       />
 
-      {/* Lista de productos */}
+      {/* LISTA DE PRODUCTOS */}
       <ProductsList
+        onBuy={(p) => openBuyModal(p)}
         onDetails={(p) => {
           setSelectedProduct(p);
           setDetailsOpen(true);
@@ -76,18 +73,21 @@ export default function App() {
       <Contact />
       <Footer />
 
-      {/* ⭐ MODAL DE COMPRA CON CHECKOUT */}
+      {/* ⭐ MODAL DE COMPRA DINÁMICO */}
       <BuyModal 
         open={buyOpen} 
         onClose={() => setBuyOpen(false)}
-        onCheckout={handleCheckout}
+        product={selectedProduct}
       />
 
+      {/* MODAL DE DETALLES */}
       <ProductDetailsModal
         open={detailsOpen}
         onClose={() => setDetailsOpen(false)}
         product={selectedProduct}
+        onBuy={(p) => openBuyModal(p)}
       />
+
 
     </div>
   );
