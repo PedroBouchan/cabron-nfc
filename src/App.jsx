@@ -15,6 +15,8 @@ import ProductDetailsModal from "./components/ProductDetailsModal";
 
 import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
+import Personalizada from "./pages/Personalizada";
+
 
 export default function App() {
   const [buyOpen, setBuyOpen] = useState(false);
@@ -97,6 +99,9 @@ export default function App() {
         {/* RUTAS DE STRIPE */}
         <Route path="/success" element={<Success />} />
         <Route path="/cancel" element={<Cancel />} />
+
+        <Route path="/personalizada" element={<Personalizada />} />
+
 
       </Routes>
     </BrowserRouter>

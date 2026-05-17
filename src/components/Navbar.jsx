@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar({ onBuy }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const { lang, setLang, texts } = useLanguage();
+  const location = useLocation(); // ⭐ Detectar ruta actual
 
   // Scroll suave a secciones
   const handleScroll = (id) => {
     const el = document.getElementById(id);
     if (!el) return;
     el.scrollIntoView({ behavior: "smooth" });
-    setOpen(false); // cerrar menú mobile
+    setOpen(false);
   };
 
   // Detectar scroll
@@ -65,6 +67,20 @@ export default function Navbar({ onBuy }) {
               onClick={() => handleScroll("benefits")}
             >
               {texts.nav_benefits}
+            </li>
+
+            {/* ⭐ BOTÓN PERSONALIZADA CON ESTADO ACTIVO */}
+            <li
+              className={`cursor-pointer flex items-center ${
+                location.pathname === "/personalizada"
+                  ? "text-nfcblue font-bold"
+                  : "hover:text-nfcblue"
+              }`}
+              onClick={() => (window.location.href = "/personalizada")}
+            >
+              <span className="px-4 py-[6px] rounded-full bg-white text-black font-semibold hover:bg-nfcblue hover:text-white transition leading-none">
+                Personalizada
+              </span>
             </li>
 
             <li
@@ -138,6 +154,21 @@ export default function Navbar({ onBuy }) {
               onClick={() => handleScroll("benefits")}
             >
               {texts.nav_benefits}
+            </li>
+
+            {/* ⭐ MOBILE: BOTÓN PERSONALIZADA ACTIVO */}
+            <li
+              className={`py-3 cursor-pointer ${
+                location.pathname === "/personalizada"
+                  ? "text-nfcblue font-bold"
+                  : "hover:text-nfcblue"
+              }`}
+              onClick={() => {
+                window.location.href = "/personalizada";
+                setOpen(false);
+              }}
+            >
+              Personalizada
             </li>
 
             <li

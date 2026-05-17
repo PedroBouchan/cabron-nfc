@@ -1,110 +1,114 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Benefits from "./components/Benefits";
-import Product from "./components/Product";
-import ProductsList from "./components/ProductsList";
-import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import BuyModal from "./components/BuyModal";
-import ProductDetailsModal from "./components/ProductDetailsModal";
-
-import Success from "./pages/Success";
-import Cancel from "./pages/Cancel";
-
-// ⭐ IMPORTAMOS LA NUEVA VENTANA
-import Personalizada from "./pages/Personalizada";
-
-export default function App() {
-  const [buyOpen, setBuyOpen] = useState(false);
-  const [detailsOpen, setDetailsOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
-  const openBuyModal = (product) => {
-    setSelectedProduct(product);
-    setBuyOpen(true);
-  };
-
+export default function Personalizada() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <div className="w-full min-h-screen bg-black text-white">
 
-        {/* RUTA PRINCIPAL */}
-        <Route
-          path="/"
-          element={
-            <div className="bg-black min-h-screen text-white pt-24">
-              <Navbar onBuy={() => openBuyModal({
-                name: "Tarjeta NFC CABRÓN",
-                price: 39.99,
-                image: "/tarjeta.png"
-              })} />
+      {/* NAVBAR */}
+      <Navbar />
 
-              <Hero onBuy={() => openBuyModal({
-                name: "Tarjeta NFC CABRÓN",
-                price: 39.99,
-                image: "/tarjeta.png"
-              })} />
+      {/* CONTENIDO */}
+      <div className="pt-24"> 
+        {/* HERO */}
+        <section className="w-full min-h-[80vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
 
-              <Benefits />
+          {/* Glow */}
+          <div className="absolute w-[500px] h-[500px] bg-nfcblue/20 blur-[120px] rounded-full -z-10"></div>
 
-              <Product
-                onBuy={() => openBuyModal({
-                  name: "Tarjeta NFC CABRÓN",
-                  price: 39.99,
-                  image: "/tarjeta.png"
-                })}
-                onDetails={() => {
-                  setSelectedProduct({
-                    name: "Tarjeta NFC CABRÓN",
-                    image: "/product.png",
-                    description: "Tarjeta NFC premium para compartir tu información con un toque."
-                  });
-                  setDetailsOpen(true);
-                }}
-              />
+          {/* Tarjeta flotante */}
+          <div
+            className="w-[320px] h-[200px] bg-neutral-900 rounded-xl shadow-2xl mb-10
+                       border border-neutral-700 animate-float"
+          ></div>
 
-              <ProductsList
-                onBuy={(p) => openBuyModal(p)}
-                onDetails={(p) => {
-                  setSelectedProduct(p);
-                  setDetailsOpen(true);
-                }}
-              />
+          <h1 className="text-4xl font-bold mb-4">
+            Tarjeta NFC Personalizada Premium
+          </h1>
 
-              <HowItWorks />
-              <Testimonials />
-              <Contact />
-              <Footer />
+          <p className="text-neutral-300 max-w-xl mb-8">
+            Diseñada especialmente para tu marca, negocio o profesión.
+          </p>
 
-              <BuyModal 
-                open={buyOpen} 
-                onClose={() => setBuyOpen(false)}
-                product={selectedProduct}
-              />
+          <a
+            href="#form"
+            className="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-neutral-200 transition"
+          >
+            Crear mi tarjeta personalizada
+          </a>
+        </section>
 
-              <ProductDetailsModal
-                open={detailsOpen}
-                onClose={() => setDetailsOpen(false)}
-                product={selectedProduct}
-                onBuy={(p) => openBuyModal(p)}
-              />
-            </div>
-          }
-        />
+        {/* BENEFICIOS */}
+        <section className="py-20 px-6 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-10 text-center">Beneficios</h2>
 
-        {/* RUTAS DE STRIPE */}
-        <Route path="/success" element={<Success />} />
-        <Route path="/cancel" element={<Cancel />} />
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 text-neutral-300 text-lg">
+            <li>• Diseño editorial premium</li>
+            <li>• Tu logo, tus colores, tu estilo</li>
+            <li>• Impresión profesional</li>
+            <li>• NFC + QR integrado</li>
+            <li>• Programación incluida</li>
+            <li>• Entrega en 3–5 días</li>
+          </ul>
+        </section>
 
-        {/* ⭐ NUEVA RUTA: TARJETA PERSONALIZADA */}
-        <Route path="/personalizada" element={<Personalizada />} />
+        {/* EJEMPLOS */}
+        <section className="py-20 px-6 bg-neutral-950">
+          <h2 className="text-3xl font-bold mb-10 text-center">Ejemplos</h2>
 
-      </Routes>
-    </BrowserRouter>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="w-full h-48 bg-neutral-800 rounded-xl"></div>
+            <div className="w-full h-48 bg-neutral-800 rounded-xl"></div>
+            <div className="w-full h-48 bg-neutral-800 rounded-xl"></div>
+          </div>
+
+          <p className="text-center text-neutral-500 mt-6">
+            (Aquí agregaremos los mockups reales después)
+          </p>
+        </section>
+
+        {/* FORMULARIO */}
+        <section id="form" className="py-20 px-6 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            Personaliza tu tarjeta
+          </h2>
+
+          <form className="grid grid-cols-1 gap-6">
+            <input
+              type="text"
+              placeholder="Nombre o negocio"
+              className="p-3 rounded bg-neutral-900 border border-neutral-700"
+            />
+
+            <input
+              type="text"
+              placeholder="Redes sociales o link"
+              className="p-3 rounded bg-neutral-900 border border-neutral-700"
+            />
+
+            <input
+              type="text"
+              placeholder="Colores preferidos"
+              className="p-3 rounded bg-neutral-900 border border-neutral-700"
+            />
+
+            <input
+              type="file"
+              className="p-3 rounded bg-neutral-900 border border-neutral-700"
+            />
+
+            <button
+              className="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-neutral-200 transition"
+            >
+              Enviar solicitud
+            </button>
+          </form>
+        </section>
+      </div>
+
+      {/* FOOTER */}
+      <Footer />
+    </div>
   );
 }
