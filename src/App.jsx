@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -12,83 +13,92 @@ import Footer from "./components/Footer";
 import BuyModal from "./components/BuyModal";
 import ProductDetailsModal from "./components/ProductDetailsModal";
 
+import Success from "./pages/Success";
+import Cancel from "./pages/Cancel";
+
 export default function App() {
   const [buyOpen, setBuyOpen] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // ⭐ ABRIR MODAL DE COMPRA CON PRODUCTO
   const openBuyModal = (product) => {
     setSelectedProduct(product);
     setBuyOpen(true);
   };
 
   return (
-    <div className="bg-black min-h-screen text-white pt-24">
+    <BrowserRouter>
+      <Routes>
 
-      {/* NAVBAR */}
-      <Navbar onBuy={() => openBuyModal({
-        name: "Tarjeta NFC CABRÓN",
-        price: 39.99,
-        image: "/tarjeta.png"
-      })} />
+        {/* RUTA PRINCIPAL */}
+        <Route
+          path="/"
+          element={
+            <div className="bg-black min-h-screen text-white pt-24">
+              <Navbar onBuy={() => openBuyModal({
+                name: "Tarjeta NFC CABRÓN",
+                price: 39.99,
+                image: "/tarjeta.png"
+              })} />
 
-      {/* HERO */}
-      <Hero onBuy={() => openBuyModal({
-        name: "Tarjeta NFC CABRÓN",
-        price: 39.99,
-        image: "/tarjeta.png"
-      })} />
+              <Hero onBuy={() => openBuyModal({
+                name: "Tarjeta NFC CABRÓN",
+                price: 39.99,
+                image: "/tarjeta.png"
+              })} />
 
-      <Benefits />
+              <Benefits />
 
-      {/* PRODUCTO PRINCIPAL */}
-      <Product
-        onBuy={() => openBuyModal({
-          name: "Tarjeta NFC CABRÓN",
-          price: 39.99,
-          image: "/tarjeta.png"
-        })}
-        onDetails={() => {
-          setSelectedProduct({
-            name: "Tarjeta NFC CABRÓN",
-            image: "/product.png",
-            description: "Tarjeta NFC premium para compartir tu información con un toque."
-          });
-          setDetailsOpen(true);
-        }}
-      />
+              <Product
+                onBuy={() => openBuyModal({
+                  name: "Tarjeta NFC CABRÓN",
+                  price: 39.99,
+                  image: "/tarjeta.png"
+                })}
+                onDetails={() => {
+                  setSelectedProduct({
+                    name: "Tarjeta NFC CABRÓN",
+                    image: "/product.png",
+                    description: "Tarjeta NFC premium para compartir tu información con un toque."
+                  });
+                  setDetailsOpen(true);
+                }}
+              />
 
-      {/* LISTA DE PRODUCTOS */}
-      <ProductsList
-        onBuy={(p) => openBuyModal(p)}
-        onDetails={(p) => {
-          setSelectedProduct(p);
-          setDetailsOpen(true);
-        }}
-      />
+              <ProductsList
+                onBuy={(p) => openBuyModal(p)}
+                onDetails={(p) => {
+                  setSelectedProduct(p);
+                  setDetailsOpen(true);
+                }}
+              />
 
-      <HowItWorks />
-      <Testimonials />
-      <Contact />
-      <Footer />
+              <HowItWorks />
+              <Testimonials />
+              <Contact />
+              <Footer />
 
-      {/* ⭐ MODAL DE COMPRA DINÁMICO */}
-      <BuyModal 
-        open={buyOpen} 
-        onClose={() => setBuyOpen(false)}
-        product={selectedProduct}
-      />
+              <BuyModal 
+                open={buyOpen} 
+                onClose={() => setBuyOpen(false)}
+                product={selectedProduct}
+              />
 
-      {/* MODAL DE DETALLES */}
-      <ProductDetailsModal
-        open={detailsOpen}
-        onClose={() => setDetailsOpen(false)}
-        product={selectedProduct}
-        onBuy={(p) => openBuyModal(p)}
-      />
+              <ProductDetailsModal
+                open={detailsOpen}
+                onClose={() => setDetailsOpen(false)}
+                product={selectedProduct}
+                onBuy={(p) => openBuyModal(p)}
+              />
+            </div>
+          }
+        />
 
+        {/* RUTAS DE STRIPE */}
+        <Route path="/success" element={<Success />} />
+        <Route path="/cancel" element={<Cancel />} />
 
-    </div>
+      </Routes>
+    </BrowserRouter>
   );
 }
