@@ -1,4 +1,11 @@
+import  { useState } from "react";
+
 export default function BuyModal({ open, onClose, product }) {
+
+  // ⭐ Hooks SIEMPRE van arriba
+  const [shipping, setShipping] = useState("standard");
+
+  // ⭐ Luego puedes hacer returns condicionales
   if (!open || !product) return null;
 
   const handleCheckout = async () => {
@@ -11,6 +18,7 @@ export default function BuyModal({ open, onClose, product }) {
           body: JSON.stringify({
             name: product.name,
             price: product.price,
+            shipping: shipping, // ⭐ Enviamos envío al backend
           }),
         }
       );
@@ -47,6 +55,19 @@ export default function BuyModal({ open, onClose, product }) {
           <div className="w-full bg-black border border-white/20 rounded-lg p-3">
             {product.name} — ${product.price}
           </div>
+        </div>
+
+        {/* ENVÍO */}
+        <div className="space-y-2">
+          <label className="text-white/70 text-sm">Método de envío</label>
+          <select
+            className="w-full bg-black border border-white/20 rounded-lg p-3"
+            value={shipping}
+            onChange={(e) => setShipping(e.target.value)}
+          >
+            <option value="standard">Envío estándar — $4.99</option>
+            <option value="express">Envío express — $9.99</option>
+          </select>
         </div>
 
         {/* BOTONES */}

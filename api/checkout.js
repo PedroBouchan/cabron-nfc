@@ -14,12 +14,29 @@ export default async function handler(req, res) {
 
     const stripe = new Stripe(stripeKey);
 
-    const { name, price } = req.body;
+    // ⭐ AHORA RECIBIMOS ENVÍO
+    const { name, price, shipping } = req.body;
 
+    // ⭐ DEFINIR COSTO DE ENVÍO
+    let shippingCost = 0;
+    let shippingName = "";
+
+    if (shipping === "standard") {
+      shippingCost = 4.99;
+      shippingName = "Envío estándar (3-5 días)";
+    }
+
+    if (shipping === "express") {
+      shippingCost = 9.99;
+      shippingName = "Envío express (1-2 días)";
+    }
+
+    // ⭐ CREAR SESIÓN DE CHECKOUT
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
       line_items: [
+        // PRODUCTO
         {
           price_data: {
             currency: "usd",
@@ -28,6 +45,20 @@ export default async function handler(req, res) {
           },
           quantity: 1,
         },
+
+        // ENVÍO (solo si shippingCost > 0)
+        ...(shippingCost > 0
+          ? [
+              {
+                price_data: {
+                  currency: "usd",
+                  product_data: { name: shippingName },
+                  unit_amount: Math.round(shippingCost * 100),
+                },
+                quantity: 1,
+              },
+            ]
+          : []),
       ],
       success_url: "https://cabron-nfc.vercel.app/success",
       cancel_url: "https://cabron-nfc.vercel.app/cancel",
