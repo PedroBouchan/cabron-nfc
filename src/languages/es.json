@@ -1,0 +1,164 @@
+{
+  "nav_home": "Inicio",
+  "nav_product": "Producto",
+  "nav_benefits": "Beneficios",
+  "nav_contact": "Contacto",
+  "nav_buy": "Comprar ahora",
+
+  "hero_title_1": "Conecta tu mundo",
+  "hero_title_2": "con",
+  "hero_subtitle": "La tarjeta inteligente que te representa. Comparte tu información con un solo toque.",
+  "hero_button_buy": "Comprar ahora",
+  "hero_button_view": "Ver producto",
+
+  "benefits_title_1": "¿Por qué",
+  "benefits_title_2": "CABRÓN NFC?",
+
+  "benefit_1_title": "Comparte al instante",
+  "benefit_1_desc": "Un solo toque y tu información se comparte sin apps, sin códigos, sin complicaciones.",
+
+  "benefit_2_title": "Seguro y profesional",
+  "benefit_2_desc": "Control total de tu información. Actualiza tus datos cuando quieras.",
+
+  "benefit_3_title": "Compatible con todo",
+  "benefit_3_desc": "Funciona con cualquier smartphone moderno. Sin apps, sin registros.",
+
+  "product_title_1": "La tarjeta que",
+  "product_title_2": "habla por ti",
+
+  "product_desc": "Una tarjeta NFC premium, diseñada para profesionales que quieren causar una impresión inmediata. Comparte tu información con un solo toque.",
+
+  "product_bullet_1": "Material premium",
+  "product_bullet_2": "Compatible con iPhone y Android",
+  "product_bullet_3": "Sin apps, sin suscripciones",
+  "product_bullet_4": "Actualiza tu información cuando quieras",
+
+  "product_buy": "Comprar ahora",
+  "product_details": "Ver detalles",
+
+  "how_title": "Cómo funciona",
+
+  "how_1_title": "1. Acerca tu tarjeta",
+  "how_1_desc": "Toca cualquier smartphone compatible con NFC. No necesita apps ni configuraciones.",
+
+  "how_2_title": "2. Comparte tu información",
+  "how_2_desc": "Tu perfil se abre al instante: redes, contacto, portafolio, WhatsApp y más.",
+
+  "how_3_title": "3. Actualiza cuando quieras",
+  "how_3_desc": "Cambia tu información sin volver a comprar otra tarjeta. Siempre al día.",
+
+  "testimonials_title": "Lo que dicen nuestros clientes",
+
+  "test_1_text": "Una herramienta indispensable para networking. La reacción de la gente cuando toco su teléfono es increíble.",
+  "test_1_name": "Carlos Mendoza",
+  "test_1_role": "Emprendedor",
+
+  "test_2_text": "Me dio una presencia más profesional. Ya no cargo tarjetas de papel. Todo es digital.",
+  "test_2_name": "María López",
+  "test_2_role": "Consultora",
+
+  "test_3_text": "La mejor inversión para mi marca personal. Es rápida, elegante y siempre sorprende.",
+  "test_3_name": "Javier Ruiz",
+  "test_3_role": "Diseñador",
+
+  "contact_title": "Contacto",
+  "contact_desc": "¿Tienes dudas o quieres más información? Estamos aquí para ayudarte.",
+  "contact_location": "Fontana, California",
+  "contact_email": "contacto@cabronnfc.com",
+  "contact_name": "Tu nombre",
+  "contact_email_placeholder": "Tu correo electrónico",
+  "contact_message": "Tu mensaje",
+  "contact_send": "Enviar mensaje",
+
+  "footer_nav": "Navegación",
+  "footer_legal": "Legal",
+  "footer_terms": "Términos y condiciones",
+  "footer_privacy": "Política de privacidad",
+  "footer_cookies": "Cookies",
+  "footer_language": "Idioma",
+  "footer_rights": "Todos los derechos reservados.",
+
+  "prod_card_title": "Tarjeta NFC CABRÓN",
+  "prod_card_desc": "Una tarjeta NFC diseñada para quienes exigen presencia, estilo y tecnología en un solo gesto. Acabado negro mate con grabado CABRÓN NFC en negro brillante, resistente, elegante y lista para impresionar.",
+  "prod_card_b1": "Material PVC de alta durabilidad",
+  "prod_card_b2": "Chip NFC NTAG215 de lectura instantánea",
+  "prod_card_b3": "Resistente al agua y al desgaste",
+  "prod_card_b4": "Compatible con iPhone y Android",
+  "prod_card_b5": "Ideal para compartir redes, contacto o portafolio",
+
+  "prod_band_title": "Pulsera NFC",
+  "prod_band_desc": "Pulsera NFC minimalista, cómoda y resistente. Su diseño negro mate con el sello CABRÓN NFC aporta estilo sin esfuerzo mientras te permite compartir tu información con un solo toque.",
+  "prod_band_b1": "Silicona hipoalergénica de grado premium",
+  "prod_band_b2": "Chip NFC NTAG215 integrado",
+  "prod_band_b3": "Resistente al agua, sudor y uso rudo",
+  "prod_band_b4": "Ajuste cómodo para uso prolongado",
+  "prod_band_b5": "Compatible con todos los teléfonos modernos",
+
+  "prod_sticker_title": "Sticker NFC",
+  "prod_sticker_desc": "Sticker NFC elegante y discreto, perfecto para teléfonos, laptops o vehículos. Acabado negro mate con el logo CABRÓN NFC en negro brillante. Funcional, resistente y estético.",
+  "prod_sticker_b1": "Material adhesivo premium de alta resistencia",
+  "prod_sticker_b2": "Chip NFC NTAG215 de activación rápida",
+  "prod_sticker_b3": "Resistente al agua y al calor",
+  "prod_sticker_b4": "Ideal para superficies planas",
+  "prod_sticker_b5": "Compatible con iPhone y Android",
+
+  "prod_keychain_title": "Llavero NFC",
+  "prod_keychain_desc": "Llavero NFC robusto y sofisticado, diseñado para acompañarte a todas partes. Cuerpo negro mate con grabado CABRÓN NFC en negro brillante. Elegante, resistente y siempre listo.",
+  "prod_keychain_b1": "Cuerpo ABS premium resistente a impactos",
+  "prod_keychain_b2": "Chip NFC NTAG215 integrado",
+  "prod_keychain_b3": "Aro metálico reforzado",
+  "prod_keychain_b4": "Ideal para llaves, mochilas o autos",
+  "prod_keychain_b5": "Compatible con todos los teléfonos modernos",
+
+
+  "products_list_title": "Todos los productos",
+  "product_1_name": "Tarjeta NFC CABRÓN",
+  "product_1_desc": "Una tarjeta NFC diseñada para quienes exigen presencia, estilo y tecnología en un solo gesto. Acabado negro mate con grabado CABRÓN NFC en negro brillante, resistente, elegante y lista para impresionar.",
+  "product_1_price": "$39.99",
+
+  "product_2_name": "Pulsera NFC",
+  "product_2_desc": "Pulsera NFC minimalista, cómoda y resistente. Su diseño negro mate con el sello CABRÓN NFC aporta estilo sin esfuerzo mientras te permite compartir tu información con un solo toque.",
+  "product_2_price": "$24.99",
+
+  "product_3_name": "Sticker NFC",
+  "product_3_desc": "Sticker NFC elegante y discreto, perfecto para teléfonos, laptops o vehículos. Acabado negro mate con el logo CABRÓN NFC en negro brillante. Funcional, resistente y estético.",
+  "product_3_price": "$9.99",
+
+  "product_4_name": "Llavero NFC",
+  "product_4_desc": "Llavero NFC robusto y sofisticado, diseñado para acompañarte a todas partes. Cuerpo negro mate con grabado CABRÓN NFC en negro brillante. Elegante, resistente y siempre listo.",
+  "product_4_price": "$19.99",
+
+
+
+
+  "modal_title": "Detalles del producto",
+  "modal_price": "Precio",
+  "modal_close": "Cerrar",
+  "modal_buy": "Comprar ahora",
+  "modal_bullets_card_1": "Material PVC de alta durabilidad",
+  "modal_bullets_card_2": "Chip NFC NTAG215 de lectura instantánea",
+  "modal_bullets_card_3": "Resistente al agua y al desgaste",
+  "modal_bullets_card_4": "Compatible con iPhone y Android",
+  "modal_bullets_card_5": "Ideal para compartir redes, contacto o portafolio",
+
+  "modal_bullets_band_1": "Silicona hipoalergénica de grado premium",
+  "modal_bullets_band_2": "Chip NFC NTAG215 integrado",
+  "modal_bullets_band_3": "Resistente al agua, sudor y uso rudo",
+  "modal_bullets_band_4": "Ajuste cómodo para uso prolongado",
+  "modal_bullets_band_5": "Compatible con todos los teléfonos modernos",
+
+  "modal_bullets_sticker_1": "Material adhesivo premium de alta resistencia",
+  "modal_bullets_sticker_2": "Chip NFC NTAG215 de activación rápida",
+  "modal_bullets_sticker_3": "Resistente al agua y al calor",
+  "modal_bullets_sticker_4": "Ideal para superficies planas",
+  "modal_bullets_sticker_5": "Compatible con iPhone y Android",
+
+  "modal_bullets_keychain_1": "Cuerpo ABS premium resistente a impactos",
+  "modal_bullets_keychain_2": "Chip NFC NTAG215 integrado",
+  "modal_bullets_keychain_3": "Aro metálico reforzado",
+  "modal_bullets_keychain_4": "Ideal para llaves, mochilas o autos",
+  "modal_bullets_keychain_5": "Compatible con todos los teléfonos modernos"
+
+
+
+}

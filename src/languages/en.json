@@ -1,0 +1,163 @@
+{
+  "nav_home": "Home",
+  "nav_product": "Product",
+  "nav_benefits": "Benefits",
+  "nav_contact": "Contact",
+  "nav_buy": "Buy now",
+
+  "hero_title_1": "Connect your world",
+  "hero_title_2": "with",
+  "hero_subtitle": "The smart card that represents you. Share your information with a single tap.",
+  "hero_button_buy": "Buy now",
+  "hero_button_view": "View product",
+
+  "benefits_title_1": "Why",
+  "benefits_title_2": "CABRÓN NFC?",
+
+  "benefit_1_title": "Instant sharing",
+  "benefit_1_desc": "One tap and your information is shared. No apps, no codes, no complications.",
+
+  "benefit_2_title": "Secure and professional",
+  "benefit_2_desc": "Full control of your information. Update your data anytime.",
+
+  "benefit_3_title": "Works with everything",
+  "benefit_3_desc": "Compatible with any modern smartphone. No apps, no registrations.",
+
+  "product_title_1": "The card that",
+  "product_title_2": "speaks for you",
+
+  "product_desc": "A premium NFC card designed for professionals who want to make an immediate impression. Share your information with a single tap.",
+
+  "product_bullet_1": "Premium material",
+  "product_bullet_2": "Compatible with iPhone and Android",
+  "product_bullet_3": "No apps, no subscriptions",
+  "product_bullet_4": "Update your information anytime",
+
+  "product_buy": "Buy now",
+  "product_details": "View details",
+
+  "how_title": "How it works",
+
+  "how_1_title": "1. Tap your card",
+  "how_1_desc": "Touch any NFC‑compatible smartphone. No apps or setup required.",
+
+  "how_2_title": "2. Share your information",
+  "how_2_desc": "Your profile opens instantly: social media, contact, portfolio, WhatsApp and more.",
+
+  "how_3_title": "3. Update anytime",
+  "how_3_desc": "Change your information without buying another card. Always up to date.",
+
+  "testimonials_title": "What our customers say",
+
+  "test_1_text": "An essential tool for networking. People's reaction when I tap their phone is incredible.",
+  "test_1_name": "Carlos Mendoza",
+  "test_1_role": "Entrepreneur",
+
+  "test_2_text": "It gave me a more professional presence. I no longer carry paper cards. Everything is digital.",
+  "test_2_name": "María López",
+  "test_2_role": "Consultant",
+
+  "test_3_text": "The best investment for my personal brand. It's fast, elegant, and always surprises.",
+  "test_3_name": "Javier Ruiz",
+  "test_3_role": "Designer",
+
+  "contact_title": "Contact",
+  "contact_desc": "Do you have questions or want more information? We're here to help.",
+  "contact_location": "Fontana, California",
+  "contact_email": "contact@cabronnfc.com",
+  "contact_name": "Your name",
+  "contact_email_placeholder": "Your email",
+  "contact_message": "Your message",
+  "contact_send": "Send message",
+
+  "footer_nav": "Navigation",
+  "footer_legal": "Legal",
+  "footer_terms": "Terms and conditions",
+  "footer_privacy": "Privacy policy",
+  "footer_cookies": "Cookies",
+  "footer_language": "Language",
+  "footer_rights": "All rights reserved.",
+
+  "prod_card_title": "CABRÓN NFC Card",
+  "prod_card_desc": "An NFC card designed for those who demand presence, style, and technology in a single gesture. Matte black finish with glossy CABRÓN NFC engraving — elegant, durable, and built to impress.",
+  "prod_card_b1": "High‑durability PVC material",
+  "prod_card_b2": "Instant‑read NTAG215 NFC chip",
+  "prod_card_b3": "Water and wear resistant",
+  "prod_card_b4": "Compatible with iPhone and Android",
+  "prod_card_b5": "Perfect for sharing contact, socials, or portfolio",
+
+  "prod_band_title": "NFC Wristband",
+  "prod_band_desc": "A minimalist, comfortable, and durable NFC wristband. Its matte black design with the CABRÓN NFC seal adds effortless style while letting you share your info with a single tap.",
+  "prod_band_b1": "Premium hypoallergenic silicone",
+  "prod_band_b2": "Integrated NTAG215 NFC chip",
+  "prod_band_b3": "Water, sweat, and impact resistant",
+  "prod_band_b4": "Comfortable long‑term fit",
+  "prod_band_b5": "Compatible with all modern phones",
+
+  "prod_sticker_title": "NFC Sticker",
+  "prod_sticker_desc": "A sleek and discreet NFC sticker, perfect for phones, laptops, or vehicles. Matte black finish with glossy CABRÓN NFC logo — functional, resistant, and aesthetic.",
+  "prod_sticker_b1": "High‑resistance premium adhesive",
+  "prod_sticker_b2": "Fast‑activation NTAG215 NFC chip",
+  "prod_sticker_b3": "Water and heat resistant",
+  "prod_sticker_b4": "Ideal for flat surfaces",
+  "prod_sticker_b5": "Compatible with iPhone and Android",
+
+  "prod_keychain_title": "NFC Keychain",
+  "prod_keychain_desc": "A robust and sophisticated NFC keychain designed to go everywhere with you. Matte black body with glossy CABRÓN NFC engraving — elegant, durable, and always ready.",
+  "prod_keychain_b1": "Impact‑resistant premium ABS body",
+  "prod_keychain_b2": "Integrated NTAG215 NFC chip",
+  "prod_keychain_b3": "Reinforced metal ring",
+  "prod_keychain_b4": "Perfect for keys, backpacks, or cars",
+  "prod_keychain_b5": "Compatible with all modern phones",
+
+  
+  "products_list_title": "All products",
+"product_1_name": "CABRÓN NFC Card",
+"product_1_desc": "An NFC card designed for those who demand presence, style, and technology in a single gesture. Matte black finish with glossy CABRÓN NFC engraving — elegant, durable, and built to impress.",
+"product_1_price": "$39.99",
+
+"product_2_name": "NFC Wristband",
+"product_2_desc": "A minimalist, comfortable, and durable NFC wristband. Its matte black design with the CABRÓN NFC seal adds effortless style while letting you share your information with a single tap.",
+"product_2_price": "$24.99",
+
+"product_3_name": "NFC Sticker",
+"product_3_desc": "A sleek and discreet NFC sticker, perfect for phones, laptops, or vehicles. Matte black finish with glossy CABRÓN NFC logo — functional, resistant, and aesthetic.",
+"product_3_price": "$9.99",
+
+"product_4_name": "NFC Keychain",
+"product_4_desc": "A robust and sophisticated NFC keychain designed to go everywhere with you. Matte black body with glossy CABRÓN NFC engraving — elegant, durable, and always ready.",
+"product_4_price": "$19.99",
+
+
+  "modal_title": "Product details",
+  "modal_price": "Price",
+  "modal_close": "Close",
+"modal_buy": "Buy now",
+
+"modal_bullets_card_1": "High‑durability PVC material",
+"modal_bullets_card_2": "Instant‑reading NFC NTAG215 chip",
+"modal_bullets_card_3": "Water and wear resistant",
+"modal_bullets_card_4": "Compatible with iPhone and Android",
+"modal_bullets_card_5": "Perfect for sharing social media, contact, or portfolio",
+
+"modal_bullets_band_1": "Premium hypoallergenic silicone",
+"modal_bullets_band_2": "Integrated NFC NTAG215 chip",
+"modal_bullets_band_3": "Water, sweat, and impact resistant",
+"modal_bullets_band_4": "Comfortable for long‑term use",
+"modal_bullets_band_5": "Compatible with all modern phones",
+
+"modal_bullets_sticker_1": "High‑resistance premium adhesive material",
+"modal_bullets_sticker_2": "Fast‑activation NFC NTAG215 chip",
+"modal_bullets_sticker_3": "Water and heat resistant",
+"modal_bullets_sticker_4": "Ideal for flat surfaces",
+"modal_bullets_sticker_5": "Compatible with iPhone and Android",
+
+"modal_bullets_keychain_1": "Impact‑resistant premium ABS body",
+"modal_bullets_keychain_2": "Integrated NFC NTAG215 chip",
+"modal_bullets_keychain_3": "Reinforced metal ring",
+"modal_bullets_keychain_4": "Perfect for keys, backpacks, or cars",
+"modal_bullets_keychain_5": "Compatible with all modern phones"
+
+
+
+}
